@@ -1,10 +1,12 @@
 <header class="header">
-  <!-- Верхній блок: Лого, меню, логін, перемикач мови -->
-  <nav class="navbar navbar-expand-lg container py-0">
-    <!-- Логотип -->
-    <a class="navbar-brand d-flex align-items-center" href="./"> Skovoridki </a>
+  <!-- Верхній блок: Лого, меню, логін, пошук. Додав fixed-top -->
+  <nav class="navbar navbar-expand-lg container py-0 fixed-top">
+    <!-- Назва без іконки. Телефон +380914567890 упущено-->
+    <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="./">
+      Skovoridki
+    </a>
 
-    <!-- Бургер-меню -->
+    <!-- Бургер-меню для мобільних -->
     <button
       class="navbar-toggler"
       type="button"
@@ -17,13 +19,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Контент меню -->
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <!-- Навігація -->
+    <!-- Контент навігації -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+      <!-- Ліве меню -->
       <ul class="navbar-nav me-auto small">
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle fw-semibold"
             href="#"
             id="shopDropdown"
             data-bs-toggle="dropdown"
@@ -37,87 +39,51 @@
             <li><a class="dropdown-item" href="#collections">Collections</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="learnDropdown"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Learn
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="learnDropdown">
-            <li>
-              <a class="dropdown-item" href="how-to-use.html">How to Use</a>
-            </li>
-            <li><a class="dropdown-item" href="why-us.html">Why Us</a></li>
-            <li><a class="dropdown-item" href="compare.html">Comparison</a></li>
-          </ul>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about_us">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacts">Contacts</a>
+          <a class="nav-link fw-semibold" href="#learn">Learn</a>
         </li>
       </ul>
 
-      <!-- Логін, перемикач мови -->
+      <!-- Пошук і логін -->
       <div class="d-flex align-items-center">
-        <a
-          href="login.html"
-          class="btn btn-outline-secondary btn-sm me-3 small"
+        <!-- Пошук: лупа -->
+        <button
+          class="btn p-0 border-0"
+          id="searchButton"
+          aria-label="Search"
+          style="color: #000; font-size: 1.2rem"
         >
-          <i class="bi bi-person-circle"></i>
-        </a>
+          <i class="bi bi-search"></i>
+        </button>
+        <!-- Поле пошуку (вилазить після кліку) -->
+        <form
+          id="searchForm"
+          class="d-none ms-3"
+          style="max-width: 200px"
+        >
+          <input
+            class="form-control form-control-sm"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
 
-        <div class="language-switcher d-flex gap-2">
-          <button class="btn btn-outline-secondary btn-sm">EN</button>
-          <button class="btn btn-outline-secondary btn-sm">UA</button>
-        </div>
+        <!-- Логін -->
+        <a
+        href="./login.html"
+        class="btn btn-outline-secondary btn-sm me-3 small"
+      >
+      <i class="bi bi-person-circle"></i>
+      </a>
       </div>
     </div>
   </nav>
-
-  <!-- Нижній блок: телефон, корзина -->
-  <div
-    class="header-lower container d-flex justify-content-between align-items-center py-0 border-top"
-  >
-    <!-- Телефон -->
-    <div class="d-flex align-items-center">
-      <img
-        src="img/simplified_pan_logo.png"
-        alt="Simplified Pan Logo"
-        width="111"
-        height="50"
-        style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)"
-      />
-      <p class="mb-0 me-0 fw-bold"></p>
-      <a href="tel:+380914567890" class="text-decoration-none text-dark"
-        >+380914567890</a
-      >
-    </div>
-
-    <!-- Пошук і корзина -->
-    <div class="d-flex align-items-center">
-      <form class="d-flex align-items-center me-3">
-        <input
-          class="form-control form-control-sm"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-secondary btn-sm ms-2" type="submit">
-          <i class="bi bi-search"></i>
-        </button>
-      </form>
-      <a
-        href="cart.html"
-        class="btn btn-outline-secondary d-flex align-items-center"
-      >
-        <i class="bi bi-cart text-secondary fs-5 me-1"></i>
-      </a>
-    </div>
-  </div>
 </header>
+
+<script>
+  // Вилізання поля пошуку при кліку на лупу
+  document.getElementById('searchButton').addEventListener('click', function () {
+    document.getElementById('searchForm').classList.toggle('d-none');
+  });
+</script>
