@@ -1,5 +1,6 @@
 @import "globals.css";
 @import "index.header.css";
 @import "index.products.css";
+@import "index.main.partial.css";
 /* */
 @import "controls.css";

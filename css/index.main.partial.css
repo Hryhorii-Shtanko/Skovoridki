@@ -1,0 +1,19 @@
+main {
+    margin-top: 40px;
+  }
+  .carousel-control-prev-icon{
+    background-image: url(../img/left-arrowhead-svgrepo-com.svg);
+  }
+  .carousel-control-next-icon{
+    background-image: url(../img/right-arrowhead-svgrepo-com.svg);
+  }
+  /* carousel-control-next */
+
+.carousel-item img {
+  border: 2px solid #ddd; /* Рамка */
+  border-radius: 8px; /* Округлені кути */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тінь */
+}
+.deals {
+  height: auto;
+}
