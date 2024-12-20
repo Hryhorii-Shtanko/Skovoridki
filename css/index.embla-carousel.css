@@ -1,0 +1,21 @@
+.embla {
+    overflow: hidden;
+    background-color: #f8f9fa; /* Можна змінити на потрібний колір */
+  }
+  
+  .embla__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .embla__container {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    margin-right: 10px;
+  }
+  

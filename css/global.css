@@ -4,13 +4,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
 }
 
-/* Глобальні змінні */
 :root {
     scroll-behavior: smooth;
+    /* --card-color-buy: #16784a; */
+    --card-color-buy: #16784a;
 }
 
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+/* .container {
+    padding: 20px !important; 
+    margin: 10px !important;
+  } */
+  
 /* Зображення */
 
 /* img {

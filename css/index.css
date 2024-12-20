@@ -1,6 +1,8 @@
-@import "globals.css";
+@import "bootstrap.min.css";
+@import "global.css";
 @import "index.header.css";
 @import "index.products.css";
 @import "index.main.partial.css";
+@import "index.embla-carousel.css";
 /* */
 @import "controls.css";
