@@ -1,5 +1,5 @@
 .bi-search{
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 /* header {
     position: fixed;
@@ -8,13 +8,23 @@
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   } */
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
+  .header {
     background-color: #fff; /* Білий фон */
-    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь для візуального відділення */
-    transition: background-color 0.3s ease;
+    z-index: 1000;
+    width: 100%;
+    /* transition: background-color 0.3s ease; */
+    background-color: white;
 
-  }
+      }
+      .fixed-top {
+        position: fixed; /* Фіксоване положення */
+        top: 0; /* Прикріплено до верхньої частини сторінки */
+      }
+      body {
+        padding-top: 60px; /* Відступ для контенту під хедером (60px – висота хедера) */
+      }
+      /* .header {
+        position: relative;
+         z-index: 1;
+      } */
