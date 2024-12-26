@@ -8,13 +8,26 @@
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   } */
-  header {
+  .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fff; /* Білий фон */
+    background-color: white; /* Білий фон */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь для візуального відділення */
-    transition: background-color 0.3s ease;
-
+    /* transition: background-color 0.3s ease; */
   }
+  .navbar{
+    background-color: white; /* Білий фон */
+  }
+  .dropdown-menu {
+    min-width: 130px; /* Зменшена ширина */
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .dropdown-menu {
+      background-color: #ffffff; /* Білий фон для темної теми */
+      color: #000000; /* Чорний текст */
+    }
+  }
+  
