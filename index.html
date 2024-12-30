@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skovoridki</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
-    <!-- Bootstrap Icons -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
       rel="stylesheet"
@@ -21,64 +21,112 @@
     />
 
 
-
-    <!-- HTMX бібліотека -->
+    <!-- HTMX -->
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
       crossorigin="anonymous"
     ></script>
-    
+
+    <!-- Bootstrap JS -->
     <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"
-></script>
-    <!-- Кастомні стилі -->
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/index.css" />
   </head>
-
   <body>
+    <!-- Header -->
     <header
+      class="header"
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
-      data-hx-get="index.header.partial.html"
+      data-hx-get="index.header.html"
     ></header>
-    <main
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.main.partial.html"
-    ></main>
-    <!-- index.product-embla-Carousel.partial.html -->
-    <!-- <section
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.benefits.partial.html"
-        >    -->
-        <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.products.partial.html"
-          >
-        <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.embla-carousel.partial.html"
-        class="embla"
-      ></section>
-  </section>
 
+    <!-- Main Content -->
+    <main class="main">
+      <section
+        id="deals"
+        class="deals-container"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.deals.html"
+      ></section>
+
+      <section
+        class="embla-carousel"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.embla-carousel.html"
+      ></section>
+
+      <section
+        id="products"
+        class="products-container"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.products.html"
+      ></section>
+      <!-- <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.products.html"
+      ></section> -->
+    </main>
+    <!-- <section
+    data-hx-trigger="load"
+    data-hx-swap="outerHTML"
+    data-hx-get="index.special-deals.partial.html"
+    id="special-deals"
+    class="deals"
+></section> -->
+
+    <!-- Footer -->
     <footer
+      class="footer-container"
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
-      data-hx-get="index.footer.partial.html"
+      data-hx-get="index.footer.html"
     ></footer>
+
+    <!-- Modal -->
     <div
+      class="modal-container"
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
-      data-hx-get="index.product-info-modal.partial.html"
+      data-hx-get="index.product-info-modal.html"
     ></div>
-    <script src="js/index.js"></script> 
+
+    <!-- Custom Scripts -->
+    <script src="js/index.js"></script>
+    <!-- <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script> -->
+    <!-- <script type="text/javascript" src="./js/promo-embla.js"></script> -->
+    <script>
+      const emblaNode = document.querySelector('.embla-carousel');
+if (!emblaNode) {
+    console.error("Embla carousel not found in DOM!");
+}
+
+    </script> 
+<script
+src="https://unpkg.com/htmx.org@1.9.10"
+integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const emblaNode = document.querySelector(".embla-carousel");
+  if (emblaNode) {
+    const embla = EmblaCarousel(emblaNode, { loop: true });
+  }
+});
+</script>
+
 
   </body>
 </html>

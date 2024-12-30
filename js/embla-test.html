@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embla Carousel</title>
+  <style>
+    /* Мінімальні стилі для каруселі */
+    .embla {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .embla__viewport {
+      overflow: hidden;
+      width: 100%;
+    }
+    .embla__container {
+      display: flex;
+      user-select: none;
+      -webkit-touch-callout: none;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .embla__slide {
+      flex: 0 0 100%;
+      position: relative;
+    }
+    .embla__slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .embla__button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    .embla__button--prev {
+      left: 10px;
+    }
+    .embla__button--next {
+      right: 10px;
+    }
+  </style>
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+</head>
+<body>
+  <div class="embla">
+    <button class="embla__button embla__button--prev">Prev</button>
+    <button class="embla__button embla__button--next">Next</button>
+    <div class="embla__viewport">
+      <div class="embla__container">
+        <div class="embla__slide"><img src="freepik__candid.jpeg" alt="Slide 1"></div>
+        <div class="embla__slide"><img src="freepik__candid.jpeg" alt="Slide 2"></div>
+        <div class="embla__slide"><img src="freepik__candid.jpeg" alt="Slide 3"></div>
+        <div class="embla__slide"><img src="freepik__candid.jpeg" alt="Slide 4"></div>
+        <div class="embla__slide"><img src="freepik__candid.jpeg" alt="Slide 5"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 1. Отримуємо елементи каруселі
+    const emblaNode = document.querySelector('.embla');
+    const viewportNode = emblaNode.querySelector('.embla__viewport');
+    const prevButton = emblaNode.querySelector('.embla__button--prev');
+    const nextButton = emblaNode.querySelector('.embla__button--next');
+
+    // 2. Ініціалізуємо Embla Carousel
+    const embla = EmblaCarousel(viewportNode);
+
+    // 3. Додаємо події до кнопок
+    prevButton.addEventListener('click', () => embla.scrollPrev());
+    nextButton.addEventListener('click', () => embla.scrollNext());
+  </script>
+</body>
+</html>

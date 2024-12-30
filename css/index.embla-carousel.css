@@ -1,21 +1,83 @@
 .embla {
-    overflow: hidden;
-    background-color: #f8f9fa; /* Можна змінити на потрібний колір */
-  }
-  
-  .embla__viewport {
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .embla__container {
-    display: flex;
-    transition: transform 0.3s ease;
-  }
-  
-  .embla__slide {
-    position: relative;
-    flex: 0 0 100%;
-    margin-right: 10px;
-  }
-  
+  overflow: hidden;
+  background-color: #f8f9fa; /* Можна змінити на потрібний колір */
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.embla__slide {
+  /* width: 356px;
+  height: 356px; */
+  position: relative;
+  flex: 0 0 100%;
+  margin-right: 10px;
+}
+
+/* add more */
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 calc(100% / 5); /* 5 слайдів на сторінку */
+  position: relative;
+}
+
+.card {
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.card__image {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.btn {
+  margin-top: 10px;
+}
+/* and more  */
+/* .embla__container {
+  display: flex;
+  gap: 1rem;
+}
+
+.embla__slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+} */
+.card-attributes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.card-attributes li {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+

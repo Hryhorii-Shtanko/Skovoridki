@@ -1,0 +1,87 @@
+<header class="header">
+    <!-- Верхній блок: Лого, меню, логін, пошук. Додав fixed-top -->
+    <nav class="navbar navbar-expand-lg container py-0 fixed-top">
+        <!-- Назва без іконки. Телефон +380914567890 упущено-->
+        <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="./"> Skovoridki </a>
+
+        <!-- Бургер-меню для мобільних -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Контент навігації -->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+            <!-- Ліве меню -->
+            <ul class="navbar-nav me-auto small">
+                <li class="nav-item dropdown">
+                    <a
+                        class="nav-link dropdown-toggle fw-semibold"
+                        href="#"
+                        id="shopDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Shop
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="#deals">Deals</a></li>
+                        <li><a class="dropdown-item" href="#categories">Categories</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#collections">Collections</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#learn">Learn</a>
+                </li>
+            </ul>
+
+            <!-- Пошук і логін -->
+            <div class="d-flex align-items-center">
+                <!-- Пошук: лупа -->
+                <button
+                    class="btn p-0 border-0"
+                    id="searchButton"
+                    aria-label="Search"
+                    style="color: #000; font-size: 1.2rem"
+                >
+                    <i class="bi bi-search me-2"></i>
+                </button>
+                <!-- Поле пошуку (вилазить після кліку) -->
+                <form
+                    id="searchForm"
+                    class="d-none ms-3"
+                    style="max-width: 240px; padding-right: 10px"
+                >
+                    <input
+                        class="form-control form-control-sm me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                    />
+                </form>
+
+
+                <!-- Логін -->
+                <a href="./login.html" class="btn btn-outline-secondary btn-sm me-3 small">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    // Вилізання поля пошуку при кліку на лупу
+    document.getElementById('searchButton').addEventListener('click', function () {
+        document.getElementById('searchForm').classList.toggle('d-none');
+    });
+</script>
