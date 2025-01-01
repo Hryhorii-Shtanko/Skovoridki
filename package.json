@@ -8,3 +8,5 @@
     "build": "echo 'Skipping build process because this is a static site.'"
   }
 }
+- name: Show current branch
+  run: git branch
