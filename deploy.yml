@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - crazy-experiment
+  workflow_dispatch: # Додано для ручного запуску
 
 jobs:
   deploy:
