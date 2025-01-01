@@ -1,21 +1,10 @@
 {
+  "name": "your-project-name",
+  "version": "1.0.0",
   "dependencies": {
     "embla-carousel": "^8.5.1"
   },
-
-  "name": "your-project-name",
-  "version": "1.0.0",
-
-
-  
-    "scripts": {
-      "build": "echo 'Skipping build process because this is a static site.'"
-    }
-
-  
-
+  "scripts": {
+    "build": "echo 'Skipping build process because this is a static site.'"
+  }
 }
-
-
-
-
