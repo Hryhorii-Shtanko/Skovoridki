@@ -1,0 +1,58 @@
+/* Основний контейнер секції */
+.benefits-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  /* Заголовок секції */
+  .benefits__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Сітка */
+  .benefits__grid {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+    gap: 1.5rem; /* Відступи між елементами */
+    justify-items: center; /* Центрування елементів */
+    align-items: start; /* Вирівнювання по верхньому краю */
+  }
+  
+  /* Окремий елемент сітки */
+  .benefits__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Зображення */
+  .benefits__image {
+    width: 90px; /* Ширина зображення */
+    height: 88px; /* Висота зображення */
+    object-fit: contain; /* Адаптація зображення */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Текст під зображенням */
+  .benefits__text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+   
+  /* для мобыл */
+  @media (max-width: 768px) {
+    .benefits__grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 колонки для планшетів */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .benefits__grid {
+      grid-template-columns: 1fr; /* 1 колонка для телефонів */
+    }
+  }
+  
