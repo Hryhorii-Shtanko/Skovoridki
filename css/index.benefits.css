@@ -1,58 +1,79 @@
-/* Основний контейнер секції */
+/*
 .benefits-container {
-    margin: 2rem 0;
+    margin: 60px 0;
     text-align: center;
-  }
-  
-  /* Заголовок секції */
-  .benefits__title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Сітка */
+ background-color: none 
+Основний контейнер секції
   .benefits__grid {
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 колонок */
-    gap: 1.5rem; /* Відступи між елементами */
-    justify-items: center; /* Центрування елементів */
-    align-items: start; /* Вирівнювання по верхньому краю */
+    padding: 20px;
+     */
+ /*   grid-template-columns: repeat(5, 1fr);  5 колонок */
+
+ /*.benefits__image {
+  width: 90px;
+  height: 88px;  Висота зображення */
+
+/* Стилі для мобільних пристроїв (за замовчуванням) */
+.benefits-container {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.benefits__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.benefits__grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr; /* Одна колонка на мобільних */
+  gap: 1rem; /* Відступи між елементами */
+  justify-items: center;
+  align-items: start;
+}
+
+.benefits__item {
+  text-align: center;
+}
+
+.benefits__image {
+  width: 90px;
+  height: 88px;  
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.benefits__text {
+  font-size: 0.875rem;
+  color: #333;
+}
+.benefits__text strong{
+  font-weight: 700;
+}
+
+/* Стилі для ширших екранів (таблетки, десктопи) */
+@media (min-width: 768px) {
+  .benefits__grid {
+    grid-template-columns: repeat(2, 1fr); /* Дві колонки для планшетів */
   }
-  
-  /* Окремий елемент сітки */
-  .benefits__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  /* Зображення */
+
   .benefits__image {
-    width: 90px; /* Ширина зображення */
-    height: 88px; /* Висота зображення */
-    object-fit: contain; /* Адаптація зображення */
-    margin-bottom: 0.5rem;
+    width: 80px;
+    height: 80px;
   }
-  
-  /* Текст під зображенням */
+
   .benefits__text {
     font-size: 1rem;
-    font-weight: bold;
-    color: #333;
   }
-   
-  /* для мобыл */
-  @media (max-width: 768px) {
-    .benefits__grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 колонки для планшетів */
-    }
+}
+
+@media (min-width: 1024px) {
+  .benefits__grid {
+    grid-template-columns: repeat(5, 1fr); /* П'ять колонок для десктопів */
   }
-  
-  @media (max-width: 480px) {
-    .benefits__grid {
-      grid-template-columns: 1fr; /* 1 колонка для телефонів */
-    }
+
+  .benefits__title {
+    font-size: 2rem;
   }
-  
+}
